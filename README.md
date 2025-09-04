@@ -131,7 +131,7 @@ git push -u origin public_branch
 ```
 copy only public notebooks folder to the public_branch from private main
 ```
-git checkout main -- ../public_notebooks
+git checkout main -- public_notebooks
 cp -r ../public_notebooks .
 git push -u origin public_branch
 ```
@@ -158,3 +158,13 @@ At this point, the public_branch of the private repo should be the same as publi
 <img width="929" height="382" alt="image" src="https://github.com/user-attachments/assets/d614b1ba-81fd-4bb3-ba65-2f476877f83f" />
 
 3. Name the file in the format of where name of assignment + "solution". In that way, the python script will remove just the solution string from the file name.
+
+## 9. For updating public notebooks after initial setup
+On public_branch of private repo,
+   ```
+  git checkout main -- public_notebooks
+  git add public_notebooks
+  git commit -m "Add public notebooks directory"
+  git push -u origin public_branch
+  git push -u public public_branch:main
+   ```
