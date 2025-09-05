@@ -127,19 +127,18 @@ This is to prevent the history of private repo inside the repo.
 git checkout --orphan public_branch
 git rm -rf .
 git commit --allow-empty -m "Initial commit for public notebooks"
-git push -u origin public_branch
 ```
 copy only public notebooks folder to the public_branch from private main
 ```
 git checkout main -- public_notebooks
 cp -r ../public_notebooks .
-git push -u origin public_branch
+git push origin public_branch
 ```
 push the files into the public repo
 ```
 git add .
 git commit -m "Add public notebooks only"
-git push -u public public_branch:main
+git push public public_branch:main
 ```
 At this point, the public_branch of the private repo should be the same as public repo
 <img width="860" height="489" alt="image" src="https://github.com/user-attachments/assets/1dd337bb-e805-421f-9d21-fad77eb7ba54" />
@@ -165,6 +164,6 @@ On public_branch of private repo,
   git checkout main -- public_notebooks
   git add public_notebooks
   git commit -m "Add public notebooks directory"
-  git push -u origin public_branch
-  git push -u public public_branch:main
+  git push origin public_branch
+  git push public public_branch:main
    ```
