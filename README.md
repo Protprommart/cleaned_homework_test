@@ -1,4 +1,4 @@
-# Repository Testing For Private Fork For Solution and Syncing Updates With Public No Solution Version
+# Testing Syncing Updates From Private Repository HW with Solution To Public Repository No HW Solution
 
 My strategy is to use private repo homework_and_solution_test as a place to push the document with the newest update homework with the solution. Then we can run the script to detect where the solutions are in the homework. The homework files with no solution will be stored in separate folder that will be push to the public repo.
 
